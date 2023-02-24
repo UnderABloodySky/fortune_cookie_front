@@ -1,38 +1,34 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
+  height: 100vh; /* establecer altura del contenedor al 100% de la altura de la ventana */
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: center; /* centrar el contenido horizontalmente */
+  align-items: center; /* centrar el contenido verticalmente */
+  background-color: #332B47; /* cambiar el color de fondo */
 }
 
-.App-link {
-  color: #61dafb;
+.my-button {
+  font-size: 48px; /* cambiar el tamaño de fuente del botón */
+  font-family: 'Roboto', sans-serif; /* establecer una tipografía personalizada */
+  padding: 20px 40px; /* establecer un relleno personalizado para el botón */
+  background-color: #4B5563; /* cambiar el color de fondo del botón */
+  color: #FFFFFF; /* cambiar el color del texto del botón */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.my-button:hover {
+  background-color: #2D3748; /* cambiar el color de fondo del botón al pasar el cursor */
+  transform: scale(2); /* aumentar el tamaño del botón al pasar el cursor */
+}
+
+.my-custom-class {
+  width: 200px;
+  height: 200px;
+}
+
+.image-size {
+  width: 200px;
+  height: 200px;
 }

@@ -1,9 +1,9 @@
-import './App.css';
 import React from 'react';
 import axios from 'axios';
 import Button from './Button';
 import Swal from 'sweetalert2';
-
+import './App.css';
+import myImage from './fortune_cookie.png';
 
 class App extends React.Component {
   constructor(props) {
@@ -18,12 +18,12 @@ class App extends React.Component {
         Swal.fire({
           title: response.data.phrase,
           text: "The Fortune Cookie Says...",
-          imageUrl: 'success',
-          imageHeight: 80, 
-          imageWidth: 80,       
-          imageClass:'img-responsive rounded-circle',        
-          animation: false,
-          imageAlt: "Cookie fortune"    
+          imageUrl: myImage,
+          imageAlt: "Other cookie",
+          customClass: {
+            image: 'my-custom-class', // Agregar una clase personalizada
+            imageSize: 'image-size'   // Agregar una clase para el tamaño de la imagen
+          }
         });
       })
       .catch(error => console.error(error));
@@ -31,11 +31,8 @@ class App extends React.Component {
 
   render() {
     return (
-      <div>
-        <Button onClick={this.handleButtonClick}>
-          Get a Phrase!
-        </Button>
-        <img src="logo.svg"/>
+      <div className="container"> {/* agregar clase container */}
+        <Button className="my-button" onClick={this.handleButtonClick}/>
       </div>
     );
   }
