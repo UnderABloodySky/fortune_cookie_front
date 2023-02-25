@@ -21,8 +21,11 @@ class App extends React.Component {
           imageUrl: myImage,
           imageAlt: "Other cookie",
           customClass: {
-            image: 'my-custom-class', // Agregar una clase personalizada
-            imageSize: 'image-size'   // Agregar una clase para el tamaño de la imagen
+            image: 'my-custom-class',
+            imageSize: 'image-size',
+            swal2Popup: 'swal2-popup', // Agrega la clase 'swal2-popup',
+            title: 'my-custom-title-class',
+            content: 'my-custom-content-class'
           }
         });
       })

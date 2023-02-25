@@ -7,7 +7,7 @@
 }
 
 .my-button {
-  font-size: 48px; /* cambiar el tamaño de fuente del botón */
+  font-size: 40px; /* cambiar el tamaño de fuente del botón */
   font-family: 'Roboto', sans-serif; /* establecer una tipografía personalizada */
   padding: 20px 40px; /* establecer un relleno personalizado para el botón */
   background-color: #4B5563; /* cambiar el color de fondo del botón */
@@ -15,12 +15,12 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
 }
 
 .my-button:hover {
   background-color: #2D3748; /* cambiar el color de fondo del botón al pasar el cursor */
-  transform: scale(2); /* aumentar el tamaño del botón al pasar el cursor */
+  transform: scale(1.2); /* aumentar el tamaño del botón al pasar el cursor */
 }
 
 .my-custom-class {
@@ -32,3 +32,49 @@
   width: 200px;
   height: 200px;
 }
+
+.swal2-popup {
+  background-color: #2D3748 !important;
+}
+
+.my-custom-title-class {
+  color: #FFFFFF !important;
+}
+
+.my-custom-content-class {
+  color: #FF0000!important;
+}
+
+.my-button::after {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border-radius: 5px;
+  box-shadow: 0 0 10px 0px orange;
+  animation: pulse 2s infinite;
+  opacity: 1;
+  text-shadow: 0 0 10px orange;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+    box-shadow: 0 0 0 0px orange;
+    text-shadow: 0 0 10px orange;
+  }
+  50% {
+    opacity: 0.5;
+    box-shadow: 0 0 0 10px orange;
+    text-shadow: 0 0 10px orange;
+  }
+  100% {
+    opacity: 0;
+    box-shadow: 0 0 0 0px orange;
+    text-shadow: 0 0 10px orange;
+  }
+}
+
+
